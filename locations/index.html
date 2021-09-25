@@ -7,33 +7,40 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 			integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="/default.css"/>
-		<link rel="icon" href="/media/soda-barn-teal.png"/>
+    <link rel="stylesheet" href="custom.css"/>
+		<link rel="icon" href="/media/soda-barn-logo-teal.png"/>
 		<title>Locations | The Soda Barn - Soda Pop and Cookies</title>
 	</head>
 	<body>
 
-    <div class="soda-barn-header">
+    <!-- <div class="soda-barn-header">
       <img src="/media/soda-barn-logo-white.png" height="150px" title="The Soda Barn" alt="The Soda Barn Logo"/>
       <div class="header-divider"></div>
-    </div>
+    </div> -->
 
-
-		<nav class="navbar navbar-expand-sm navbar-dark">
-			<!--<a class="navbar-brand" href="/"><img src="/media/soda-barn-icon.png" width="75em"></a>-->
+<nav class="navbar navbar-expand-sm navbar-dark">
+			<!-- <a class="navbar-brand" href="/"><img src="/media/soda-barn-logo-white.png" width="75em"></a> -->
 			<div class="navbar-centerer">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- gave navbar-toggler the nav-item class so it gets sized the same as the nav-items -->
+        <button class="navbar-toggler nav-item" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/menu">Menu</a>
             </li>
+            <li class="middle-logo">
+              <a href="/"><img src="/media/soda-barn-logo-white.png" title="The Soda Barn" alt="The Soda Barn Logo"></a>
+            </li>
             <li class="nav-item active">
-                <a class="nav-link" href="/locations">Locations<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/locations">Locations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -43,22 +50,48 @@
     <div class="page-centerer">
       <div class="page-content">
 
-				<h1>LOCATIONS</h1>
-				<br><br>
+        <h2 class="location-name">Chubbuck</h2>
+				<div class="location">
+          <img class="location-image" src="/media/soda-barn-chubbuck.PNG" title="Chubbuck Location" alt="The Soda Barn in Chubbuck"/>
+          <div class="location-info">
+            <p class="location-address">Address: <a href="https://www.google.com/maps/place/The+Soda+Barn/@42.9201757,-112.4602805,17z/data=!3m1!5s0x53554678196f9bdf:0x188c2d43b71536e5!4m8!1m2!3m1!2sThe+Soda+Barn!3m4!1s0x535545d7e204294f:0x178554b13e715fa5!8m2!3d42.9201434!4d-112.4580927" target="_blank">435 E Chubbuck Rd, Chubbuck, ID 83202</a></p>
+            <p class="location-phone-number">Phone: (208) 252-4478</p>
+            <div class="location-hours">Hours:
+              <p class="location-hour">Monday - Thursday: 7:30 AM - 10:00 PM (Lobby until 9:00 PM)</p>
+              <p class="location-hour">Friday - Saturday: 7:30 AM - 11:00 PM (Lobby until 10:00 PM)<p>
+            </div>
+          </div>
+        </div>
+        
+        <hr>
+
+        <h2 class="location-name">Pocatello</h2>
+        <div class="location">
+          <img class="location-image" src="/media/soda-barn-pocatello.PNG" title="Pocatello Location" alt="The Soda Barn in Pocatello"/>
+          <div class="location-info">
+            <p class="location-address">Address: <a href="https://www.google.com/maps/place/The+Soda+Barn/@42.8623252,-112.4404646,17z/data=!3m1!4b1!4m5!3m4!1s0x53554f548d631287:0xf2874558642c4bcd!8m2!3d42.8623318!4d-112.4382652" target="_blank">650 S 5th Ave, Pocatello, ID 83201</a></p>
+            <p class="location-phone-number">Phone: (208) 252-4478</p>
+            <div class="location-hours">Hours:
+              <p class="location-hour">Monday - Thursday: 7:30 AM - 10:00 PM (Lobby until 9:00 PM)</p>
+              <p class="location-hour">Friday - Saturday: 7:30 AM - 11:00 PM (Lobby until 10:00 PM)<p>
+            </div>
+          </div>
+        </div>
 
         <hr>
-        <h2>Chubbuck</h2>
-        <p><a href="https://www.google.com/maps/place/The+Soda+Barn/@42.9201757,-112.4602805,17z/data=!3m1!5s0x53554678196f9bdf:0x188c2d43b71536e5!4m8!1m2!3m1!2sThe+Soda+Barn!3m4!1s0x535545d7e204294f:0x178554b13e715fa5!8m2!3d42.9201434!4d-112.4580927">435 E Chubbuck Rd, Chubbuck, ID 83202</a></p>
-        <p>(208) 251-0918</p>
-        <hr>
-        <h2>Pocatello</h2>
-        <p><a href="https://www.google.com/maps/place/The+Soda+Barn/@42.8623252,-112.4404646,17z/data=!3m1!4b1!4m5!3m4!1s0x53554f548d631287:0xf2874558642c4bcd!8m2!3d42.8623318!4d-112.4382652">650 S 5th Ave, Pocatello, ID 83201</a></p>
-        <p>(208) 252-4478</p>
-        <hr>
-        <h2>Burley</h2>
-        <p><a href="https://www.google.com/maps/place/Soda+Barn/@42.5369554,-113.7709232,17z/data=!4m5!3m4!1s0x54ab35be3486bd6b:0x45d11eb81315da45!8m2!3d42.5366689!4d-113.7709671">Burley, ID 83318 (Mobile Trailer)</a></p>
-        <p>(208) 431-1607</p>
-        <hr>
+
+        <h2 class="location-name">Burley</h2>
+        <div class="location">
+          <img class="location-image" src="/media/soda-barn-burley.jpg" title="Burley Location" alt="The Soda Barn in Burley"/>
+          <div class="location-info">
+            <p class="location-address">Address: <a href="https://www.google.com/maps/place/Soda+Barn/@42.5369554,-113.7709232,17z/data=!4m5!3m4!1s0x54ab35be3486bd6b:0x45d11eb81315da45!8m2!3d42.5366689!4d-113.7709671" target="_blank">Burley, ID 83318</a></p>
+            <p class="location-phone-number">Phone: (208) 431-1607</p>
+            <div class="location-hours">Hours:
+              <p class="location-hour">Unknown</p>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
 		
@@ -71,13 +104,13 @@
       <div class="footer-item">All images © The Soda Barn</div>
       <div class="footer-item">
         <a href="https://github.com/baileehodge/thesodabarn" target="_blank">
-          <img src="/media/icons/github.png" width="25px" title="GitHub Repository"/>
+          <img src="/media/icons/github-white.png" width="25px" title="GitHub Repository"/>
         </a>
         <a href="https://www.facebook.com/mysodabarn" target="_blank">
-          <img src="/media/icons/facebook.png" width="25px" title="Facebook Page"/>
+          <img src="/media/icons/facebook-white.png" width="25px" title="Facebook Page"/>
         </a>
         <a href="https://www.instagram.com/the.soda.barn/" target="_blank">
-          <img src="/media/icons/instagram.png" width="25px" title="Instagram Page"/>
+          <img src="/media/icons/instagram-white.png" width="25px" title="Instagram Page"/>
         </a>
       </div>
 		</div>

@@ -1,0 +1,30 @@
+.location-name {
+  text-align: center;
+}
+
+.location-image {
+  width: 15em;
+}
+
+@media only screen and (min-width: 600px) {
+  .location-name {
+    text-align: left;
+  }
+  
+  .location {
+    display: flex;
+  }
+
+  .location-image {
+    margin-right: 1em;
+    height: fit-content; /*add this or picture will stretch*/
+  }
+
+  .location-info {
+    text-align: left;
+  }
+
+  .location-hour {
+    margin-left: 1em;
+  }
+}

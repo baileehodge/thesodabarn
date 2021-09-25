@@ -37,19 +37,17 @@ body {
 .soda-barn-header {
 	padding: 0.5em 0 0 0;
 }
+/*
 .header-divider {
   width: 350px; /*this needs to be customized whenever the navbar is changed*/
-  height: 1px;
+  /*height: 1px;
   margin: auto;
   margin-top: 0.5em;
-}
+}*/
 .navbar, .footer {
 	height: auto;
 	min-height: 4em;
 	width: 100%;
-}
-.navbar-toggler {
-  padding: auto;
 }
 .page-content {
 	min-height: 200px;
@@ -66,6 +64,37 @@ body {
     padding-top: 4em;
   	padding-bottom: 4em;
     max-width: 800px;
+  }
+}
+
+/* SPECIAL NAVBAR BEHAVIOR */
+.nav-item {
+	margin: 0 0.5em 0 0.5em;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-width: 100px;
+	text-align: center;
+}
+.navbar-toggler-icon {
+  background-image: url("/media/soda-barn-logo-white.png")!important;
+}
+.middle-logo, .middle-logo img {
+  width: 0px;
+  height: 0px;
+}
+@media only screen and (min-width: 576px) { /*this number is carefully calibrated*/
+  .middle-logo {
+    width: unset;
+    height: unset;
+  }
+  .middle-logo img {
+    width: 75px;
+    height: unset;
+  }
+}
+@media only screen and (min-width: 650px) {
+	.middle-logo img {
+    width: 125px;
   }
 }
 
@@ -89,7 +118,7 @@ body {
 }
 
 /* GENERAL */
-.soda-barn-header {
+/*.soda-barn-header {
   font-size: 3em;
   text-align: center;
 }
@@ -97,49 +126,23 @@ body {
 	.soda-barn-title {
     font-size: 4.5em;
   }
-}
-
-.heading {
-	padding-bottom: 1em;
-}
-
-.nav-item {
-	margin: 0 0.5em 0 0.5em;
-  min-width: 100px;
-	text-align: center;
-}
+}*/
 
 .page-content {
 	text-align: center;
 }
 
-.footer {	
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
+@media only screen and (min-width: 900px) { /*customize this number when footer is changed*/
+  .footer {	
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
-
 .footer-item {
 	margin: auto;
 	text-align: center;
 }
-
 .footer-item a{
 	color: white;
-}
-
-.hours {
-	margin: 5em 0em;
-  margin-bottom: 0;
-}
-
-.menu-hr {
-	width: 50%;
-	margin-right: auto;
-  margin-left: auto;
-	border-top: 2px solid #033F47;
-}
-
-h2 {
-	font-size: 1.8em;
 }
