@@ -6,6 +6,19 @@
   width: 15em;
 }
 
+.location-location {
+  display: flex;
+  justify-content: center;
+}
+
+.location-maps {
+    margin-right: 0.5em;    
+}
+
+.location-maps-logo {
+   height: 1.5em;
+}
+
 @media only screen and (min-width: 600px) {
   .location-name {
     text-align: left;
@@ -22,6 +35,10 @@
 
   .location-info {
     text-align: left;
+  }
+
+  .location-location {
+    justify-content: left;
   }
 
   .location-hour {

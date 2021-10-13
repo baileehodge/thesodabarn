@@ -1,0 +1,14 @@
+We could use one of these to find a user's location with their IP address and then suggest the closest store location to them
+- https://www.abstractapi.com/ip-geolocation-api
+- https://ipinfo.io/
+
+Link Soda Barn social media accounts
+- https://www.instagram.com/developer/
+- https://developers.facebook.com/
+
+Just fun
+- https://evilinsult.com/api/
+
+
+More apis:
+- https://github.com/public-apis/public-apis

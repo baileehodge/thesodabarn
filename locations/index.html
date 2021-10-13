@@ -12,13 +12,7 @@
 		<title>Locations | The Soda Barn - Soda Pop and Cookies</title>
 	</head>
 	<body>
-
-    <!-- <div class="soda-barn-header">
-      <img src="/media/soda-barn-logo-white.png" height="150px" title="The Soda Barn" alt="The Soda Barn Logo"/>
-      <div class="header-divider"></div>
-    </div> -->
-
-<nav class="navbar navbar-expand-sm navbar-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark">
 			<!-- <a class="navbar-brand" href="/"><img src="/media/soda-barn-logo-white.png" width="75em"></a> -->
 			<div class="navbar-centerer">
         <!-- gave navbar-toggler the nav-item class so it gets sized the same as the nav-items -->
@@ -51,51 +45,80 @@
       <div class="page-content">
 
 				<h1>LOCATIONS</h1>
+        <p>Ordered by closest to your location (<a id="user-location" target="_blank"></a>)</p>
 
-        <h2 class="location-name">Chubbuck</h2>
-				<div class="location">
-          <img class="location-image" src="/media/soda-barn-chubbuck.PNG" title="Chubbuck Location" alt="The Soda Barn in Chubbuck"/>
-          <div class="location-info">
-            <p class="location-address">Address: <a href="https://www.google.com/maps/place/The+Soda+Barn/@42.9201757,-112.4602805,17z/data=!3m1!5s0x53554678196f9bdf:0x188c2d43b71536e5!4m8!1m2!3m1!2sThe+Soda+Barn!3m4!1s0x535545d7e204294f:0x178554b13e715fa5!8m2!3d42.9201434!4d-112.4580927" target="_blank">435 E Chubbuck Rd, Chubbuck, ID 83202</a></p>
-            <p class="location-phone-number">Phone: (208) 252-4478</p>
-            <div class="location-hours">Hours:
-              <p class="location-hour">Monday - Thursday: 7:30 AM - 10:00 PM (Lobby until 9:00 PM)</p>
-              <p class="location-hour">Friday - Saturday: 7:30 AM - 11:00 PM (Lobby until 10:00 PM)<p>
+
+        <div id="location-0"></div>
+        <div id="Chubbuck-info">
+          <h2 class="location-name">Chubbuck</h2>
+          <div class="location">
+            <img class="location-image" src="/media/soda-barn-chubbuck.PNG" title="Chubbuck Location" alt="The Soda Barn in Chubbuck"/>
+            <div class="location-info">
+              <div class="location-location">
+                <a class="location-maps" href="https://www.google.com/maps/place/The+Soda+Barn/@42.9201757,-112.4602805,17z/data=!3m1!5s0x53554678196f9bdf:0x188c2d43b71536e5!4m8!1m2!3m1!2sThe+Soda+Barn!3m4!1s0x535545d7e204294f:0x178554b13e715fa5!8m2!3d42.9201434!4d-112.4580927" target="_blank">
+                  <img class="location-maps-logo" src="/media/icons/google-maps.png" title="Google Maps" alt="Google Maps"/>
+                </a>
+                <p class="location-address">435 E Chubbuck Rd, Chubbuck, ID 83202</p>
+              </div>
+              <p class="location-phone-number"><strong>Phone:</strong> (208) 252-4478</p>
+              <div class="location-hours"><strong>Hours:</strong>
+                <p class="location-hour">Monday - Thursday: 7:30 AM - 10:00 PM<br>(Lobby until 9:00 PM)</p>
+                <p class="location-hour">Friday - Saturday: 7:30 AM - 11:00 PM<br>(Lobby until 10:00 PM)<p>
+              </div>
             </div>
           </div>
         </div>
         
         <hr>
 
-        <h2 class="location-name">Pocatello</h2>
-        <div class="location">
-          <img class="location-image" src="/media/soda-barn-pocatello.PNG" title="Pocatello Location" alt="The Soda Barn in Pocatello"/>
-          <div class="location-info">
-            <p class="location-address">Address: <a href="https://www.google.com/maps/place/The+Soda+Barn/@42.8623252,-112.4404646,17z/data=!3m1!4b1!4m5!3m4!1s0x53554f548d631287:0xf2874558642c4bcd!8m2!3d42.8623318!4d-112.4382652" target="_blank">650 S 5th Ave, Pocatello, ID 83201</a></p>
-            <p class="location-phone-number">Phone: (208) 252-4478</p>
-            <div class="location-hours">Hours:
-              <p class="location-hour">Monday - Thursday: 7:30 AM - 10:00 PM (Lobby until 9:00 PM)</p>
-              <p class="location-hour">Friday - Saturday: 7:30 AM - 11:00 PM (Lobby until 10:00 PM)<p>
+        <div id="location-1"></div>
+        <div id="Pocatello-info">
+          <h2 class="location-name">Pocatello</h2>
+          <div class="location">
+            <img class="location-image" src="/media/soda-barn-pocatello.PNG" title="Pocatello Location" alt="The Soda Barn in Pocatello"/>
+            <div class="location-info">
+              <div class="location-location">
+                <a class="location-maps" href="https://www.google.com/maps/place/The+Soda+Barn/@42.8623252,-112.4404646,17z/data=!3m1!4b1!4m5!3m4!1s0x53554f548d631287:0xf2874558642c4bcd!8m2!3d42.8623318!4d-112.4382652" target="_blank">
+                  <img class="location-maps-logo" src="/media/icons/google-maps.png" title="Google Maps" alt="Google Maps"/>
+                </a>
+                <p class="location-address">650 S 5th Ave, Pocatello, ID 83201</p>
+              </div>
+              
+              <p class="location-phone-number"><strong>Phone:</strong> (208) 252-4478</p>
+              <div class="location-hours"><strong>Hours:</strong>
+                <p class="location-hour">Monday - Thursday: 7:30 AM - 10:00 PM<br>(Lobby until 9:00 PM)</p>
+                <p class="location-hour">Friday - Saturday: 7:30 AM - 11:00 PM<br>(Lobby until 10:00 PM)<p>
+              </div>
             </div>
           </div>
         </div>
 
         <hr>
 
-        <h2 class="location-name">Burley</h2>
-        <div class="location">
-          <img class="location-image" src="/media/soda-barn-burley.jpg" title="Burley Location" alt="The Soda Barn in Burley"/>
-          <div class="location-info">
-            <p class="location-address">Address: <a href="https://www.google.com/maps/place/Soda+Barn/@42.5369554,-113.7709232,17z/data=!4m5!3m4!1s0x54ab35be3486bd6b:0x45d11eb81315da45!8m2!3d42.5366689!4d-113.7709671" target="_blank">Burley, ID 83318</a></p>
-            <p class="location-phone-number">Phone: (208) 431-1607</p>
-            <div class="location-hours">Hours:
-              <p class="location-hour">Unknown</p>
+        <div id="location-2"></div>
+        <div id="Burley-info">
+          <h2 class="location-name">Burley</h2>
+          <div class="location">
+            <img class="location-image" src="/media/soda-barn-burley.jpg" title="Burley Location" alt="The Soda Barn in Burley"/>
+            <div class="location-info">
+              <div class="location-location">
+                <a class="location-maps" href="https://www.google.com/maps/place/Soda+Barn/@42.5369554,-113.7709232,17z/data=!4m5!3m4!1s0x54ab35be3486bd6b:0x45d11eb81315da45!8m2!3d42.5366689!4d-113.7709671" target="_blank">
+                  <img class="location-maps-logo" src="/media/icons/google-maps.png" title="Google Maps" alt="Google Maps"/>
+                </a>
+                <p class="location-address">Burley, ID 83318</p>
+              </div>
+              
+              <p class="location-phone-number"><strong>Phone:</strong> (208) 431-1607</p>
+              <div class="location-hours"><strong>Hours:</strong>
+                <p class="location-hour">Unknown</p>
+              </div>
             </div>
           </div>
         </div>
-        
+				 
       </div>
     </div>
+
 		
 		<div class="footer">
       <div class="footer-item github-repo" style="width: 25px"></div>
@@ -116,6 +139,8 @@
         </a>
       </div>
 		</div>
+
+    <script src="location.js"></script>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
