@@ -3,7 +3,8 @@
 }
 
 .location-image {
-  width: 15em;
+  width: 100%;
+  margin-bottom: 1em;
 }
 
 .location-location {
@@ -30,6 +31,8 @@
 
   .location-image {
     margin-right: 1em;
+    margin-bottom: unset;
+    width: 15em;
     height: fit-content; /*add this or picture will stretch*/
   }
 
