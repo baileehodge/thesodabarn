@@ -31,4 +31,10 @@
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	}
+	
+	.page-centerer {
+		margin-left: auto;
+		margin-right: auto;
+		width: 50vw;
+	}
 </style>
