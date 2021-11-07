@@ -9,12 +9,6 @@
 	.bakery {
 		text-align: center;
 	}
-.wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
 </style>
 
 <script>
