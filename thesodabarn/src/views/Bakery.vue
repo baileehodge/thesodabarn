@@ -1,10 +1,15 @@
 <template>
-<div>
-	<h1>BAKERY ORDERS</h1>
-	<ProductList :products="products" />
-</div>
+	<div class="bakery">
+		<h1>BAKERY ORDERS</h1>
+		<ProductList :products="products" />
+	</div>
 </template>
 
+<style scoped>
+	.bakery {
+		text-align: center;
+	}
+</style>
 
 <script>
 import ProductList from "../components/ProductList.vue"

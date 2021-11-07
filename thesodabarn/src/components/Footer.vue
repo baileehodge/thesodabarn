@@ -45,10 +45,11 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: space-evenly;
+			align-items: center;
 		}
 	}
 	.footer-item {
-		margin: auto;
+		padding: 0.5em;
 		text-align: center;
 	}
 	.footer-item a{
