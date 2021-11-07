@@ -38,7 +38,6 @@
 		width: 100%;
 		
 		padding: 10px;
-		margin-bottom: 30px;
 	}
 	
 	.nav-section {

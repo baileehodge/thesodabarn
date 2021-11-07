@@ -1,14 +1,12 @@
 <template>
 	<div class="menu">
-		<div class="page-centerer">
-				<h1>MENU</h1>
-				<br>
-				<img src="../assets/menus/menu1.jpg" width="100%"/>
-				<hr class = "menu-hr">
-				<img src="../assets/menus/menu2.jpg" width="100%"/>
-				<hr class = "menu-hr">
-				<img src="../assets/menus/menu3.jpg" width="100%"/>
-		</div>
+		<h1>MENU</h1>
+		<br>
+		<img src="../assets/menus/menu1.jpg" width="100%"/>
+		<hr class = "menu-hr">
+		<img src="../assets/menus/menu2.jpg" width="100%"/>
+		<hr class = "menu-hr">
+		<img src="../assets/menus/menu3.jpg" width="100%"/>
 	</div>
 </template>
 

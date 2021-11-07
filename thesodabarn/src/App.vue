@@ -1,7 +1,9 @@
 <template>
 	<div id="app">
 		<Navbar />
-		<router-view/>
+		<div class="page-centerer">
+			<router-view/>
+		</div>
 		<Footer />
 	</div>
 </template>
@@ -32,6 +34,10 @@
 		-moz-osx-font-smoothing: grayscale;
 	}
 	
+	#app {
+		background-color: white; /* change later */
+	}
+	
 	h1 {
 		font-family: "Bahnschrift Condensed", sans-serif;
 	}
@@ -40,5 +46,10 @@
 		margin-left: auto;
 		margin-right: auto;
 		width: 50vw;
+		
+		background-color: white;
+		
+		padding-top: 30px;
+		padding-bottom: 30px;
 	}
 </style>
