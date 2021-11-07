@@ -36,8 +36,6 @@
 		height: auto;
 		min-height: 4em;
 		width: 100%;
-		
-		margin-top: 30px;
 	}
 
 	@media only screen and (min-width: 900px) { /*customize this number when footer is changed*/
