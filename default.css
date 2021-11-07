@@ -15,7 +15,7 @@ body {
   background-color: white;
 }
 .navbar, .footer {
-	background-color: #1B5F76; /*lightgray;*/
+	background-color: #1B5F76; /*dark teal boi*/
 	color: white;
 }
 
@@ -52,7 +52,7 @@ body {
 .page-content {
   /*min-height: 78.5vh;*/
   flex: 1;
-  
+
   padding-top: 2em;
 	padding-bottom: 2em;
   padding-left: 1em;
@@ -108,7 +108,7 @@ body {
 }
 .page-centerer {
 	width: 100%;
-  
+
   margin-right: auto;
   margin-left: auto;
 }
@@ -125,7 +125,7 @@ body {
 }
 
 @media only screen and (min-width: 900px) { /*customize this number when footer is changed*/
-  .footer {	
+  .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
