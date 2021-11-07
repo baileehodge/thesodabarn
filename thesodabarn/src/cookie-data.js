@@ -2,67 +2,49 @@ let mock = [{
     id: 1,
     name: "Coconut Lime",
     price: "$25.81 per dozen",
-    type: "Normal"
+    image: 'https://cdn.discordapp.com/attachments/831402266585071716/906780852149686312/coconut.jpg'
 },
 {
     id: 2,
     name: "Classic Sugar",
     price: "$25.81 per dozen",
-    type: "Normal"
+    image: 'https://cdn.discordapp.com/attachments/831402266585071716/906782315181666314/sugar.jpg'
 },
 {
     id: 3,
     name: "Raspberry Cheesecake",
     price: "$25.81 per dozen",
-    type: "Normal"
+    image: 'https://cdn.discordapp.com/attachments/831402266585071716/906782330125971516/raspberry.jpg'
 },
 {
     id: 4,
     name: "Chocolate Chip",
     price: "$25.81 per dozen",
-    type: "Normal"
+    image: 'https://cdn.discordapp.com/attachments/831402266585071716/906782361792938045/chocolate.jpg'
 },
 {
     id: 5,
     name: "Cookies & Cream",
     price: "$25.81 per dozen",
-    type: "Normal"
+    image: 'https://cdn.discordapp.com/attachments/831402266585071716/906782297649459200/cream.jpg'
 },
 {
     id: 6,
     name: "Monster (flourless)",
     price: "$25.81 per dozen",
-    type: "Normal"
+    image: 'https://cdn.discordapp.com/attachments/831402266585071716/906782353085595648/monster.jpg'
 },
 {
     id: 7,
     name: "Oatmeal Cream Pie",
     price: "$25.81 per dozen",
-    type: "Normal"
+    image: 'https://cdn.discordapp.com/attachments/831402266585071716/906782343719682078/oatmeal.jpg'
 },
 {
     id: 8,
     name: "Kitchen Sink",
     price: "$25.81 per dozen",
-    type: "Normal"
-},
-{
-    id: 9,
-    name: "Pumpkin Chocolate Chip",
-    price: "$26 per dozen",
-    type: "Monthly"
-},
-{
-    id: 10,
-    name: "Pumpkin Roll",
-    price: "$26 per dozen",
-    type: "Monthly"
-},
-{
-    id: 10,
-    name: "Salted Caramel",
-    price: "$10 per dozen",
-    type: "Discount"
+    image: 'https://cdn.discordapp.com/attachments/831402266585071716/906782302825226240/kitchen.jpg'
 }
 ]
 export default mock;

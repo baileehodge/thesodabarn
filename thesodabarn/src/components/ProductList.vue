@@ -6,8 +6,8 @@
         <h2>{{product.name}}</h2>
         <h3>{{product.price}}</h3>
       </div>
-      <div class="price">
-
+      <div class="image">
+        <img :src="product.image">
       </div>
     </div>
   </div>
@@ -30,25 +30,32 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .products {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  width: 90%;
   font-family: "Century Gothic", "Arial", sans-serif;
 }
 
 .product {
+  display: flex;
   margin: 10px;
   margin-top: 50px;
   width: 200px;
+  background: #1B5F76;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .product img {
   border: 2px solid #333;
-  height: 250px;
+  height: 200px;
   width: 200px;
   object-fit: cover;
 }
@@ -56,14 +63,16 @@ export default {
 .product .image {
   display: flex;
   justify-content: center;
-  margin-bottom: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .info {
   background: #1B5F76;
   color: white;
   padding: 10px 30px;
-  height: 150px;
+  height: 100px;
+  width: 50%;
 }
 
 .info h1 {
