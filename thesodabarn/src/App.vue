@@ -32,6 +32,10 @@
 		-moz-osx-font-smoothing: grayscale;
 	}
 	
+	h1 {
+		font-family: "Bahnschrift Condensed", sans-serif;
+	}
+	
 	.page-centerer {
 		margin-left: auto;
 		margin-right: auto;
