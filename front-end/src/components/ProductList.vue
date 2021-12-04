@@ -1,7 +1,7 @@
 <template>
 	<div class="wrapper">
 		<div class="products">
-			<div class="product" v-for="product in products" :key="product.id">
+			<div class="product" v-for="product in products" :key="product._id">
 				<div class="info">
 					<h2>{{product.name}}</h2>
 					<h3>{{product.price}}</h3>
