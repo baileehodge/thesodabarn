@@ -26,7 +26,7 @@ const Cookie = mongoose.model('Cookie', cookieSchema);
 const reviewSchema = new mongoose.Schema({
 	author: String,
 	description: String,
-	rating: float,
+	rating: Number,
 });
 const Review = mongoose.model('Review', reviewSchema);
 
