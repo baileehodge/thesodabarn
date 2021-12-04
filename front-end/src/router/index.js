@@ -2,8 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Menu from '../views/Menu.vue'
-import Locations from '../views/Locations.vue'
 import Bakery from '../views/Bakery.vue'
+import Reviews from '../views/Reviews.vue'
 
 Vue.use(VueRouter)
 
@@ -19,9 +19,9 @@ const routes = [
 		component: Menu
 	},
 	{
-		path: '/locations',
-		name: 'Locations',
-		component: Locations
+		path: '/reviews',
+		name: 'Reviews',
+		component: Reviews
 	},
 	{
 		path: '/bakery',

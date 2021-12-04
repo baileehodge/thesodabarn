@@ -1,19 +1,19 @@
 <template>
-	<div class="locations">
+	<div class="reviews">
 		<h1>Under Construction</h1>
 		<p>Not implemented for creative project #4</p>
 	</div>
 </template>
 
 <style scoped>
-	.locations {
+	.reviews {
 		text-align: center;
 	}
 </style>
 
 <script>
 	export default {
-		name: 'Locations',
+		name: 'Reviews',
 		components: {
 		}
 	}

@@ -9,8 +9,8 @@
 			<a href="/"><img src="../assets/soda-barn-logo-white.png" title="The Soda Barn" alt="The Soda Barn Logo"></a>
 		</div>
 		<div class="nav-section">
-			<router-link class="nav-item" to="/locations">Locations</router-link>
 			<router-link class="nav-item" to="/bakery">Bakery</router-link>
+			<router-link class="nav-item" to="/reviews">Reviews</router-link>
 		</div>
 		<div class="nav-section"></div>
 	</div>
