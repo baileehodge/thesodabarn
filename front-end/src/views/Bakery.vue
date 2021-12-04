@@ -12,6 +12,7 @@
 </style>
 
 <script>
+	import axios from 'axios';
 	import ProductList from "../components/ProductList.vue"
 	export default {
 		name: 'Browse',
@@ -21,12 +22,17 @@
 		data() {
 			return {
 				country: '',
+				products: [],
 			}
 		},
-		computed: {
-			products() {
-				return this.$root.$data.products;
+		created() {
+			try {
+				let response = await axios.get("/api/cookies");
+				this.products = response.data;
 			}
-		}
+			catch (error) {
+				console.log(error);
+			}
+		},
 	}
 </script>
