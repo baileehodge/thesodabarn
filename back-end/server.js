@@ -15,7 +15,7 @@ mongoose.connect('mongodb://localhost:27017/museum', {
 });
 
 // Get a list of all of the items in the museum.
-import mock from './cookie-data.js';
+let mock = require('./cookie-data.json').cookies;
 app.get('/api/cookies', async (req, res) => {
   try {
     //let items = await Item.find();

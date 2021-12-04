@@ -26,13 +26,18 @@
 			}
 		},
 		created() {
-			try {
-				let response = await axios.get("/api/cookies");
-				this.products = response.data;
-			}
-			catch (error) {
-				console.log(error);
-			}
+			this.getCookies()
 		},
+		methods: {
+			async getCookies() {
+				try {
+					let response = await axios.get("/api/cookies");
+					this.products = response.data;
+				}
+				catch (error) {
+					console.log(error);
+				}
+			}
+		}
 	}
 </script>
