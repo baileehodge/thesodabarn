@@ -1,6 +1,7 @@
 <template>
 	<div class="bakery">
-		<h1>BAKERY ORDERS</h1>
+		<h1>BAKERY</h1>
+		<router-link to="/bakery/admin">Edit</router-link>
 		<ProductList :products="products" />
 	</div>
 </template>

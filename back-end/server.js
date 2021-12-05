@@ -44,74 +44,73 @@ Cookie.find().then(cookies => {
 	}
 });
 
-//deletes an item (hopefully)
-app.delete('/api/cookies/:id', async (req, res) => {
-  try {
-    Cookie.findByIdAndDelete(req.params.id, function (err, docs) {
-      if (err) throw err;
-      console.log("Deleted:", docs);
-      res.send(docs)
-    });
-  } catch(error) {
-    console.log(error);
-    res.sendStatus(600);
-  }
+//gets the cookies
+app.get('/api/cookies', async (req, res) => {
+	try {
+		let cookies = await Cookie.find();
+		console.log("Got:", cookies.length, "cookies");
+		res.send(cookies);
+	} catch (error) {
+		console.log(error);
+		res.sendStatus(500);
+	}
 });
 
-app.put('/api/cookies/:id', async (req, res) => {
-  try {
-    Cookies.findByIdAndUpdate(req.params.id, {
-      name:  req.body.name,
-      price:  req.body.price,
-      image:  req.body.image,
-    }, function (err, docs) {
-      if (err) throw err;
-      console.log("Updated:", docs);
-      res.send(docs)
-    });
-  } catch(error) {
-    console.log(error);
-    res.sendStatus(600);
-  }
-});
-
+//adds a cookie
 app.post('/api/cookies', async (req, res) => {
-  let r = {
-    name: req.body.name,
-    price: req.body.price,
-  }
-  const cookie = new Cookie(r);
-  try {
-    await cookie.save();
-    res.send(cookie);
-  } catch (error) {
-    console.log(error);
-    res.sendStatus(500);
-  }
+	try {
+		let r = {
+			name: req.body.name,
+			price: req.body.price,
+			image: req.body.image
+		}
+		const cookie = new Cookie(r);
+		await cookie.save();
+		console.log("Added:", cookie);
+		res.send(cookie);
+	} catch (error) {
+		console.log(error);
+		res.sendStatus(500);
+	}
 });
 
-// Create a new review: takes an author, a rating, the text of the review, and the time
-app.post('/api/reviews', async (req, res) => {
-  let r = {
-    author: req.body.author,
-    description: req.body.description,
-    //time: moment().format('MMMM Do YYYY, h:mm:ss a'),
-  }
-  if (req.body.rating !== undefined) r.rating = req.body.rating
-
-  const review = new Review(r);
-  try {
-    await review.save();
-    res.send(review);
-  } catch (error) {
-    console.log(error);
-    res.sendStatus(500);
-  }
+//edit a cookie
+app.put('/api/cookies/:id', async (req, res) => {
+	try {
+		Cookie.findByIdAndUpdate(req.params.id, {
+			name:  req.body.name,
+			price:  req.body.price,
+			image:  req.body.image
+		}, function (err, docs) {
+			if (err) throw err;
+			console.log("Updated:", docs);
+			res.send(docs)
+		});
+	} catch(error) {
+		console.log(error);
+		res.sendStatus(500);
+	}
 });
 
+//deletes a cookie
+app.delete('/api/cookies/:id', async (req, res) => {
+	try {
+		Cookie.findByIdAndDelete(req.params.id, function (err, docs) {
+			if (err) throw err;
+			console.log("Deleted:", docs);
+			res.send(docs)
+		});
+	} catch(error) {
+		console.log(error);
+		res.sendStatus(500);
+	}
+});
+
+//get all reviews
 app.get('/api/reviews', async (req, res) => {
 	try {
 		let reviews = await Review.find();
+		console.log("Got:", reviews.length, "reviews");
 		res.send(reviews);
 	} catch (error) {
 		console.log(error);
@@ -119,10 +118,20 @@ app.get('/api/reviews', async (req, res) => {
 	}
 });
 
-app.get('/api/cookies', async (req, res) => {
+// Create a new review: takes an author, a rating, the text of the review, and the time
+app.post('/api/reviews', async (req, res) => {
 	try {
-		let cookies = await Cookie.find();
-		res.send(cookies);
+		let r = {
+			author: req.body.author,
+			description: req.body.description,
+			//time: moment().format('MMMM Do YYYY, h:mm:ss a'),
+		}
+		if (req.body.rating !== undefined) r.rating = req.body.rating
+
+		const review = new Review(r);
+		await review.save();
+		console.log("Added:", review);
+		res.send(review);
 	} catch (error) {
 		console.log(error);
 		res.sendStatus(500);

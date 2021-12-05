@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Menu from '../views/Menu.vue'
 import Bakery from '../views/Bakery.vue'
+import Admin from '../views/Admin.vue'
 import Reviews from '../views/Reviews.vue'
 
 Vue.use(VueRouter)
@@ -27,6 +28,11 @@ const routes = [
 		path: '/bakery',
 		name: 'Bakery',
 		component: Bakery
+	},
+	{
+		path: '/bakery/admin',
+		name: 'Admin',
+		component: Admin
 	}
 	//{
 	//	path: '/about',
