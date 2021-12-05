@@ -32,7 +32,7 @@ const Review = mongoose.model('Review', reviewSchema);
 
 //preload cookie database if it's empty
 Cookie.find().then(cookies => {
-	if (cookies.length != 0) return;
+	if (cookies.length !== 0) return;
 	let mock = require('./cookie-data.json').cookies;
 	for (c of mock) {
 		const cookie = new Cookie({

@@ -22,9 +22,9 @@
 					<img :src="selectedCookie.image" />
 				</div>
 				<div class="actions" v-if="selectedCookie">
-					<button v-if="addMode" @click="addCookie(selectedCookie)">Add</button>
-					<button v-if="editMode" @click="updateCookie(selectedCookie)">Update</button>
-					<button v-if="editMode" @click="deleteCookie(selectedCookie)">Delete</button>
+					<button v-if="newCookie" @click="addCookie(selectedCookie)">Add</button>
+					<button v-if="!newCookie" @click="updateCookie(selectedCookie)">Update</button>
+					<button v-if="!newCookie" @click="deleteCookie(selectedCookie)">Delete</button>
 				</div>
 			</div>
 		</div>
@@ -48,18 +48,15 @@
 				let cookies = this.cookies.filter(cookie => cookie.name.toLowerCase().startsWith(this.findName.toLowerCase()));
 				cookies = cookies.sort((a, b) => a.name > b.name);
 				cookies.push({
-					name: "<New Cookie>",
+					name: "+",
 					price: "",
 					image: "",
 					newCookie: true,
 				});
 				return cookies;
 			},
-			addMode() {
+			newCookie() {
 				return this.selectedCookie.newCookie;
-			},
-			editMode() {
-				return (this.selectedCookie.newCookie === undefined);
 			}
 		},
 		created() {
@@ -78,6 +75,14 @@
 			selectCookie(cookie) {
 				this.findName = "";
 				this.selectedCookie = cookie;
+				if (this.newCookie) {
+					this.selectedCookie = {
+						name: "",
+						price: "",
+						image: ""
+					};
+					this.selectedCookie.newCookie = true;
+				}
 			},
 			async addCookie(cookie) {
 				try {
