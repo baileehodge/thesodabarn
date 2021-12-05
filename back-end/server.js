@@ -44,6 +44,52 @@ Cookie.find().then(cookies => {
 	}
 });
 
+//deletes an item (hopefully)
+app.delete('/api/cookies/:id', async (req, res) => {
+  try {
+    Cookie.findByIdAndDelete(req.params.id, function (err, docs) {
+      if (err) throw err;
+      console.log("Deleted:", docs);
+      res.send(docs)
+    });
+  } catch(error) {
+    console.log(error);
+    res.sendStatus(600);
+  }
+});
+
+app.put('/api/cookies/:id', async (req, res) => {
+  try {
+    Cookies.findByIdAndUpdate(req.params.id, {
+      name:  req.body.name,
+      price:  req.body.price,
+      image:  req.body.image,
+    }, function (err, docs) {
+      if (err) throw err;
+      console.log("Updated:", docs);
+      res.send(docs)
+    });
+  } catch(error) {
+    console.log(error);
+    res.sendStatus(600);
+  }
+});
+
+app.post('/api/cookies', async (req, res) => {
+  let r = {
+    name: req.body.name,
+    price: req.body.price,
+  }
+  const cookie = new Cookie(r);
+  try {
+    await cookie.save();
+    res.send(cookie);
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+  }
+});
+
 // Create a new review: takes an author, a rating, the text of the review, and the time
 app.post('/api/reviews', async (req, res) => {
   let r = {
