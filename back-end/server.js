@@ -46,12 +46,16 @@ Cookie.find().then(cookies => {
 
 // Create a new review: takes an author, a rating, the text of the review, and the time
 app.post('/api/reviews', async (req, res) => {
-  const item = new Review({
+  let review = {
     author: req.body.author,
-    rating: req.body.rating,
-    text: req.body.text,
-    time: moment().format('MMMM Do YYYY, h:mm:ss a'),
-  });
+    description: req.body.description,
+    //time: moment().format('MMMM Do YYYY, h:mm:ss a'),
+  }
+  if (req.body.rating !== undefined) {
+    review.rating = req.body.rating;
+  }
+
+  const item = new Review(review);
   try {
     await review.save();
     res.send(review);
