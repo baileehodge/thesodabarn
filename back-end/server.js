@@ -46,16 +46,14 @@ Cookie.find().then(cookies => {
 
 // Create a new review: takes an author, a rating, the text of the review, and the time
 app.post('/api/reviews', async (req, res) => {
-  let review = {
+  let r = {
     author: req.body.author,
     description: req.body.description,
     //time: moment().format('MMMM Do YYYY, h:mm:ss a'),
   }
-  if (req.body.rating !== undefined) {
-    review.rating = req.body.rating;
-  }
+  if (req.body.rating !== undefined) r.rating = req.body.rating
 
-  const item = new Review(review);
+  const review = new Review(r);
   try {
     await review.save();
     res.send(review);
@@ -65,20 +63,20 @@ app.post('/api/reviews', async (req, res) => {
   }
 });
 
-app.get('/api/cookies', async (req, res) => {
+app.get('/api/reviews', async (req, res) => {
 	try {
-		let cookies = await Cookie.find();
-		res.send(cookies);
+		let reviews = await Review.find();
+		res.send(reviews);
 	} catch (error) {
 		console.log(error);
 		res.sendStatus(500);
 	}
 });
 
-app.get('/api/reviews', async (req, res) => {
+app.get('/api/cookies', async (req, res) => {
 	try {
-		let reviews = await Review.find();
-		res.send(reviews);
+		let cookies = await Cookie.find();
+		res.send(cookies);
 	} catch (error) {
 		console.log(error);
 		res.sendStatus(500);

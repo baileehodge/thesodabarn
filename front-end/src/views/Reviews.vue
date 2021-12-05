@@ -1,12 +1,32 @@
 <template>
 	<div class="reviews">
 		<h1>REVIEWS</h1>
-		
-		
+		<div class="form" id="review-input">
+			<div id="author-stars">
+				<input v-model="author" placeholder="Your Name">
+				<star-rating
+					v-model="stars"
+					v-bind:increment="0.5"
+					v-bind:star-size="25"
+					v-bind:show-rating="false"/>
+			</div>
+			<textarea v-model="description" placeholder="Description"></textarea>
+			<button @click="addReview">Post</button>
+		</div>
+		<hr />
 		<div v-for="review in reviews" :key="review._id">
-			<p>{{review.author}}</p>
-			<p>{{review.description}}</p>
-			<p>{{review.rating}}</p>
+			<div class="review">
+				<star-rating
+					v-if="review.rating"
+					v-bind:rating="review.rating*5"
+					v-bind:increment="0.5"
+					v-bind:star-size="25"
+					v-bind:show-rating="false"
+					v-bind:read-only="true"/>
+				<span>{{review.description}}</span>
+				<span><em>- {{review.author}}</em></span>
+			</div>
+			<hr/>
 		</div>
 	</div>
 </template>
@@ -15,21 +35,77 @@
 	.reviews {
 		text-align: center;
 	}
+	.review {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.review * {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+	#review-input {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	#author-stars {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1em;
+		width: 100%;
+	}
+	#author-stars input, #author-stars star-rating {
+		flex: 1;
+	}
+	#author-stars input {
+		margin-right: 1em;
+	}
+	#review-input button {
+		width: 100%;
+	}
+	#review-input textarea {
+		width: 100%;
+		margin-bottom: 1em;
+	}
 </style>
 
 <script>
 	import axios from 'axios';
+	import StarRating from 'vue-star-rating'
 	export default {
 		name: 'Reviews',
 		components: {
+			StarRating,
 		},
 		data() {
 			return {
 				reviews: [],
+				author: "",
+				description: "",
+				stars: -1,
 			}
 		},
 		created() {
 			this.getReviews();
+		},
+		computed: {
+			rating() {
+				return this.stars / 5;
+			},
+			averageRating() {
+				var total = 0;
+				var num = 0;
+				for (let r of this.reviews) {
+					if (r.rating === undefined) continue;
+					total += r.rating;
+					num += 1;
+				}
+				return total / num;
+			},
 		},
 		methods: {
 			async getReviews() {
@@ -43,7 +119,20 @@
 			},
 			
 			async addReview() {
-				//TODO
+				try {
+					let review = {
+						author: this.author,
+						description: this.description
+					};
+					if (this.stars !== -1) review.rating = this.rating;
+					
+					await axios.post("/api/reviews", review);
+					this.description = ""
+					this.stars = -1;
+				}
+				catch (error) {
+					console.log(error);
+				}
 				this.getReviews();
 			}
 		}
