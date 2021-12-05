@@ -14,6 +14,17 @@
 			<button @click="addReview">Post</button>
 		</div>
 		<hr />
+		<div class="avg-rating" v-if="averageRating">
+			<h3>Average:</h3>
+			<star-rating
+					v-bind:rating="averageRating*5"
+					v-bind:star-size="50"
+					v-bind:increment="0.01"
+					v-bind:show-rating="false"
+					v-bind:read-only="true"/>
+		</div>
+		<hr />
+		
 		<div v-for="review in reviews" :key="review._id">
 			<div class="review">
 				<star-rating
@@ -34,6 +45,16 @@
 <style scoped>
 	.reviews {
 		text-align: center;
+	}
+	.avg-rating {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+	.avg-rating h3 {
+		margin-right: 1em;
 	}
 	.review {
 		display: flex;
@@ -91,6 +112,7 @@
 		},
 		created() {
 			this.getReviews();
+			console.log(this.averageRating)
 		},
 		computed: {
 			rating() {
@@ -104,6 +126,7 @@
 					total += r.rating;
 					num += 1;
 				}
+				if (num === 0) return undefined;
 				return total / num;
 			},
 		},
